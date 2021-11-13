@@ -1,2 +1,0 @@
-id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_odoo_digital_persona_odoo_digital_persona,odoo_digital_persona.odoo_digital_persona,model_odoo_digital_persona_odoo_digital_persona,,1,0,0,0

@@ -1,35 +1,24 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "odoo_digital_persona",
+    'name': "Odoo Digital Persona Connector",
 
     'summary': """
-        Short (1 phrase/line) summary of the module's purpose, used as
-        subtitle on modules listing or apps.openerp.com""",
+        Simple connector for Odoo Digital Persona App""",
 
     'description': """
-        Long description of module's purpose
+        Simple connector for Odoo Digital Persona App
     """,
 
-    'author': "My Company",
-    'website': "http://www.yourcompany.com",
+    'author': "Codize",
+    'website': "https://www.codize.ar",
 
-    # Categories can be used to filter modules in modules listing
-    # Check https://github.com/odoo/odoo/blob/12.0/odoo/addons/base/data/ir_module_category_data.xml
-    # for the full list
-    'category': 'Uncategorized',
+    'category': 'Human Resources',
     'version': '0.1',
 
-    # any module necessary for this one to work correctly
-    'depends': ['base', 'hr'],
+    'depends': ['base', 'hr', 'hr_attendance'],
 
-    # always loaded
     'data': [
-        # 'security/ir.model.access.csv',
         'views/views.xml',
-        'views/templates.xml',
     ],
-    # only loaded in demonstration mode
-    'demo': [
-        'demo/demo.xml',
-    ],
+    'demo': [],
 }
