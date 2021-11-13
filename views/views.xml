@@ -1,5 +1,18 @@
 <odoo>
   <data>
+
+      <record model="ir.ui.view" id="hr_form_custom">
+        <field name="name">hr.form.custom</field>
+        <field name="model">hr.employee</field>
+        <field name="inherit_id" ref="hr.view_employee_form"/>
+        <field name="arch" type="xml">
+           <page name="personal_information" position="inside">
+              <group string="Biometric">
+                  <field name="fid"/>
+              </group>
+           </page>
+        </field>
+      </record>
     
   </data>
 </odoo>
