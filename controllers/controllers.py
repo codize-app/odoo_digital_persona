@@ -21,9 +21,15 @@ class OdooDigitalPersonaApi(http.Controller):
         model = request.env['hr.employee'].sudo().search([])
         for rec in model:
             if rec.fid:
-                fids = fids + str(rec.fid, 'utf-8') + ',' + rec.barcode + ';'
+                if rec.barcode:
+                    fids = fids + str(rec.fid, 'utf-8') + ',' + rec.barcode + ';'
+                else:
+                    fids = fids + str(rec.fid, 'utf-8') + ',0;'
             else:
-                fids = fids + '-' + ',' + rec.barcode + ';'
+                if rec.barcode:
+                    fids = fids + '-' + ',' + rec.barcode + ';'
+                else:
+                    fids = fids + '-' + ',0;'
 
         return {
             "server_version": version[0] + "." + version[1],
